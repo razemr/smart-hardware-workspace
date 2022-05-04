@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/buttons';
+@import './styles/inputs';
+@import './styles/form';
+@import './styles/colors';
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+} 

@@ -1,0 +1,20 @@
+<div id="main-container">
+  <div id="products-container">
+    <h3>Products</h3>
+
+    <div id="product-filter">
+      <input type="text" placeholder="Search" #search/>
+    </div>
+    <div id="product-grid">
+      <hws-product-card
+        *ngFor="let product of products$ | async"
+        [product]="product"
+      ></hws-product-card>
+    </div>
+  </div>
+
+  <div id="cart-container">
+    <h3>Shopping Cart</h3>
+    <hws-shopping-cart></hws-shopping-cart>
+  </div>
+</div>

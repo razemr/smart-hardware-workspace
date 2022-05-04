@@ -1,0 +1,29 @@
+<div id="shopping-cart">
+  <ul>
+    <li *ngFor="let item of items$ | async">
+      <div class="cart-item">
+        <button (click)="deleteItem(item.id)">X</button>
+        <div class="title">
+          {{ item.name }}
+          <span> (x{{ item.quantity }})</span>
+        </div>
+        <div class="price">{{ item.price * item.quantity | currency }}</div>
+      </div>
+    </li>
+  </ul>
+  <hr />
+  <div class="total color-default">
+    <div>Sub-total:</div>
+    <div>{{ subTotal$ | async | currency }}</div>
+  </div>
+  <div class="total color-secondary">
+    <div>Discount:</div>
+    <div>-{{ discount$ | async | currency }}</div>
+  </div>
+  <div class="total color-primary">
+    <div>Total:</div>
+    <div>
+      {{ ((subTotal$ | async) || 0) - ((discount$ | async) || 0) | currency }}
+    </div>
+  </div>
+</div>

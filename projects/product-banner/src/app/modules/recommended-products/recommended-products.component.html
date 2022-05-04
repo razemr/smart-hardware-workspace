@@ -1,0 +1,19 @@
+<div id="featured-banner">
+  <h4>Highlights</h4>
+  <div id="featured-container">
+    <img src="{{ selectedProduct.defaultImage }}" alt="Product" />
+    <div id="feature-detail">
+      <h4>{{ selectedProduct.name }}</h4>
+      <p>{{ selectedProduct.description }}</p>
+      <div>
+        <span class="color-primary">{{
+          selectedProduct.price | currency
+        }}</span> | &nbsp;
+        <span class="color-secondary">{{
+          selectedProduct.discount | currency
+        }}</span>
+      </div>
+      <button class="btn-primary" (click)="onClick()">Add to Cart</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div id="product-card">
+  <img src="{{ product.defaultImage }}" />
+  <div id="card-content">
+    <h4>{{ product.name }}</h4>
+    <div id="price-line">
+      <span class="color-primary">{{ product.price | currency}}</span> |
+      <span class="color-secondary">-{{ product.discount | currency}}</span>
+    </div>
+    <p>{{ product.description }}</p>
+    <div id="actions">
+      <button class="btn-primary" (click)="onClick()">Add to Cart</button>
+    </div>
+  </div>
+</div>
