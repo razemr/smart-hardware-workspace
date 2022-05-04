@@ -7,7 +7,7 @@ Module Federation allows for the integration of separately complied programs kno
 This Angular project implements module federation with the help of the Angular Architect's package: https://www.npmjs.com/package/@angular-architects/module-federation
 
 ### Instructions
-Clone and run this project: https://github.com/recruit-case
+This project relies on a backend server: https://github.com/recruit-case/Frontend-Starter
 
 Run `npm install` to install project dependencies.
 
